@@ -60,7 +60,7 @@ extension MessagesViewController {
     } else {
       performUpdatesForTypingIndicatorVisability(at: section)
       updates?()
-      self?.messagesCollectionView.setTypingIndicatorViewHidden(isHidden)
+      messagesCollectionView.setTypingIndicatorViewHidden(isHidden)
       completion?(true)
     }
   }
