@@ -55,12 +55,12 @@ extension MessagesViewController {
       messagesCollectionView.performBatchUpdates({ [weak self] in
         self?.performUpdatesForTypingIndicatorVisability(at: section)
         updates?()
-        messagesCollectionView.setTypingIndicatorViewHidden(isHidden)
+        self?.messagesCollectionView.setTypingIndicatorViewHidden(isHidden)
       }, completion: completion)
     } else {
       performUpdatesForTypingIndicatorVisability(at: section)
       updates?()
-      messagesCollectionView.setTypingIndicatorViewHidden(isHidden)
+      self?.messagesCollectionView.setTypingIndicatorViewHidden(isHidden)
       completion?(true)
     }
   }
